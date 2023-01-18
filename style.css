@@ -6,13 +6,19 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     height: 100vh;
+    background-color: #008cff;
+    color: white;
 }
 
 main {
     width: 60vw;
     margin: auto;
     text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
 }
 
 #regiao {
@@ -23,11 +29,13 @@ main {
 .relogio {
     position: relative;
     margin: auto;
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    color: black;
     border: 5px solid black;
     border-radius: 50%;
-    box-shadow: 1px 1px 10px 5 px #00000031;
+    box-shadow: 1px 3px 2px 5px #00000031;
 }
 
 /* horas do relógio */
@@ -144,4 +152,12 @@ main {
     transform: rotate(240deg);
     background-color: red;
     border-radius: 50% 50% 0 0;
+}
+
+footer {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.479);
+}
+
+footer a {
+    color: white;
 }
