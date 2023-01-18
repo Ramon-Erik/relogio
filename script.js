@@ -51,14 +51,16 @@ function atualizarHora() {
     ponteiroHoras.style.transform = `rotate(${anguloHora}deg)`
     ponteiroMinutos.style.transform = `rotate(${anguloMin}deg)`
     ponteiroSegundos.style.transform = `rotate(${anguloSec}deg)`
-
+    let day = horaAtual.getDate()
+    
     if (hora >= 24) {
         hora = '0' + hora-24
+        day = horaAtual.getDate()+1
     }
     if (min < 10) {
         min = `0${min}`
     }
-    textHoras.innerText = `São ${hora}:${min} Horário em ${definirRegiao()[2]} (GMT ${definirRegiao()[1]})`
+    textHoras.innerText = `São ${hora}:${min} (dia: ${day}) Horário em ${definirRegiao()[2]} (GMT ${definirRegiao()[1]})`
     // console.log(horaAtual)
 }
 
