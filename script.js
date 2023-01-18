@@ -5,24 +5,35 @@ const ponteiroSegundos = document.querySelector('.segundos')
 function definirRegiao() {
     let local = document.querySelector('#regiao')
     let regiao = local.options[local.selectedIndex].value
+    let fuso = 0
     switch (regiao) {
         case 'brasil':
-            console.log('br')
+            fuso = -3
             break
-            case 'canada':
-            console.log('ca')
-            break
-            case 'eua':
-            console.log('eu')
+        default:
+            fuso = -5
             break
     }
+    let valores = [regiao, fuso]
+    return valores
 }
 
 function atualizarHora() {
     const horaAtual = new Date()
-    const hora = horaAtual.getHours()
+    let hora = horaAtual.getHours()
     const min = horaAtual.getMinutes()
     const sec = horaAtual.getSeconds()
+    
+    let diferencaHorario = definirRegiao()[1] - (horaAtual.getTimezoneOffset()/-60)
+    console.log(diferencaHorario)
+
+    if (horaAtual.getTimezoneOffset()/-60 < 0) {
+        hora += diferencaHorario
+    } else {
+        hora -= diferencaHorario
+    }
+
+    console.log(hora)
 
     const anguloHora = hora / 12 *360
     const anguloMin = min / 60 * 360
