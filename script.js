@@ -33,7 +33,7 @@ function definirRegiao() {
 function atualizarHora() {
     const horaAtual = new Date()
     let hora = horaAtual.getHours()
-    const min = horaAtual.getMinutes()
+    let min = horaAtual.getMinutes()
     const sec = horaAtual.getSeconds()
     
     let diferencaHorario = definirRegiao()[1] - (horaAtual.getTimezoneOffset()/-60)
