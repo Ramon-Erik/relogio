@@ -9,12 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Hora atual</h1>
+    </header>
     <main>
         <div>
-            <select name="regiao" id="regiao">
-                <option value="Brasil">Brasil</option>
-                <option value="Canada">Canadá</option>
-                <option value="EUA">Estados Unidos</option>
+            <p>
+                <label for="regiao">
+                    Informe o local desejado
+                </label>
+            </p>
+            <select name="regiao" id="regiao" onclick="definirRegiao()">
+                <option value="brasil" selected>Brasil</option>
+                <option value="canada">Canadá</option>
+                <option value="eua">Estados Unidos</option>
             </select>
         </div>
         <div class="relogio">
@@ -23,7 +31,7 @@
                 <div class="uma">1</div>
                 <div class="duas">2</div>
                 <div class="tres">3</div>
-                <div class="quatro">4</div>
+            <div class="quatro">4</div>
                 <div class="cinco">5</div>
                 <div class="seis">6</div>
                 <div class="sete">7</div>
@@ -38,7 +46,13 @@
                 <div class="segundos"></div>
             </div>
         </div>
+        <p class="texto-horas">
+            São:
+        </p>
     </main>
+    <footer>
+        <p>&copy; Desenvolvido por Ramon</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
