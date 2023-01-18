@@ -29,8 +29,8 @@ main {
 .relogio {
     position: relative;
     margin: auto;
-    width: 310px;
-    height: 310px;
+    width: 360px;
+    height: 360px;
     background-color: white;
     color: black;
     border: 5px solid black;
@@ -68,7 +68,7 @@ main {
 
 .cinco {
     bottom: 22px;
-    right: 92px;
+    right: 90px;
 }
 
 .seis {
@@ -79,7 +79,7 @@ main {
 
 .sete {
     bottom: 22px;
-    left: 92px;
+    left: 90px;
 }
 
 .oito {

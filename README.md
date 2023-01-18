@@ -8,4 +8,8 @@ Neste projeto eu trago um relógio analógico funcional criado basicamente com *
 
 Como **funcionalidade extra**, trouxe a possibilidade de ver que **horas são em outros locais**, como México, Estados Unidos e China. Fazendo um cálculo que adiciona ou subtrai a diferença de horas entre o GMT do usuario e o GMT do local em questão, tudo isso usando **JavaScript**.
 
-<img src=''>
+<p text-aling="center">
+    <img width="300px" src="imagens/img1.jpg" alt="primeira vista do projeto">
+    <img width="300px" src="imagens/img2.jpg" alt="segunda vista do projeto">
+    <img width="300px" src="imagens/img3.jpg" alt="outra vista do projeto">
+</p>

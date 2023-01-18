@@ -44,7 +44,7 @@ function atualizarHora() {
         hora -= diferencaHorario
     }
     
-    const anguloHora = hora / 12 *360
+    const anguloHora = hora / 12 * 360
     const anguloMin = min / 60 * 360
     const anguloSec = sec / 60 * 360
     
