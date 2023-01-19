@@ -25,6 +25,10 @@ function definirRegiao() {
             fuso = 8
             base = 'China'
             break
+        case 'inglaterra':
+            fuso = 0
+            base = 'Reino Unido'
+            break
     }
     let valores = [regiao, fuso, base]
     return valores
@@ -60,7 +64,7 @@ function atualizarHora() {
     if (min < 10) {
         min = `0${min}`
     }
-    textHoras.innerText = `São ${hora}:${min} (dia: ${day}) Horário em ${definirRegiao()[2]} (GMT ${definirRegiao()[1]})`
+    textHoras.innerHTML = `São ${hora}:${min} (dia: ${day})<br>Horário em ${definirRegiao()[2]} (GMT ${definirRegiao()[1]})`
     // console.log(horaAtual)
 }
 
