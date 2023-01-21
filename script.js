@@ -39,11 +39,16 @@ function atualizarHora() {
     let hora = horaAtual.getHours()
     let min = horaAtual.getMinutes()
     const sec = horaAtual.getSeconds()
-    
-    let diferencaHorario = definirRegiao()[1] - (horaAtual.getTimezoneOffset()/-60)
+    let day = horaAtual.getDate()
 
+    let diferencaHorario = definirRegiao()[1] - (horaAtual.getTimezoneOffset()/-60)
+    
     if (horaAtual.getTimezoneOffset()/-60 < 0) {
         hora += diferencaHorario
+        if (hora < 0) {
+            hora = 24 + hora
+            day = day - 1
+        } 
     } else {
         hora -= diferencaHorario
     }
@@ -55,7 +60,7 @@ function atualizarHora() {
     ponteiroHoras.style.transform = `rotate(${anguloHora}deg)`
     ponteiroMinutos.style.transform = `rotate(${anguloMin}deg)`
     ponteiroSegundos.style.transform = `rotate(${anguloSec}deg)`
-    let day = horaAtual.getDate()
+    
     
     if (hora >= 24) {
         hora = '0' + hora-24
